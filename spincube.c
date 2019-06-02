@@ -81,8 +81,10 @@ void myReshape(int w, int h)
 	2.0 * (GLfloat) w / (GLfloat) h, -2.0, 2.0, -10.0, 10.0);
 	glMatrixMode(GL_MODELVIEW);
 }
-void main(int argc, char **argv)
-{
+
+
+int main(int argc, char **argv)
+ {
  	glutInit(&argc, argv);
 	/* need both double buffering and z buffer */	
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -94,5 +96,6 @@ void main(int argc, char **argv)
 	glutMouseFunc(mouse);
 	glEnable(GL_DEPTH_TEST); /* Enable hidden--surface--removal */
 	glutMainLoop();
+//	    return 0;
 }
 
